@@ -1,10 +1,12 @@
-package com.euriconfneto.convidados
+package com.euriconfneto.convidados.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
+import com.euriconfneto.convidados.R
 import com.euriconfneto.convidados.databinding.ActivityGuestFormBinding
+import com.euriconfneto.convidados.viewmodel.GuestFormViewlModel
 
 class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
 

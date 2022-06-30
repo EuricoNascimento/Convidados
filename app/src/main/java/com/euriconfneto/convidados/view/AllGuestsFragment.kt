@@ -1,4 +1,4 @@
-package com.euriconfneto.convidados.ui
+package com.euriconfneto.convidados.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.euriconfneto.convidados.databinding.FragmentAllGuestsBinding
+import com.euriconfneto.convidados.viewmodel.AllGuestsViewModel
 
 class AllGuestsFragment : Fragment() {
 
