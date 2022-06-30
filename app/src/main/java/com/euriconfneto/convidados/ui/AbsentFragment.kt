@@ -1,4 +1,4 @@
-package com.euriconfneto.convidados.ui.slideshow
+package com.euriconfneto.convidados.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater

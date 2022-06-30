@@ -1,4 +1,4 @@
-package com.euriconfneto.convidados.ui.slideshow
+package com.euriconfneto.convidados.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
