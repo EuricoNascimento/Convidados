@@ -1,13 +1,15 @@
 package com.euriconfneto.convidados.viewmodel
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import com.euriconfneto.convidados.repository.GuestRepository
 
-class GuestFormViewlModel : ViewModel() {
+class GuestFormViewlModel(application: Application) : AndroidViewModel(application) {
 
-    private val repository = GuestRepository
+    private val repository = GuestRepository.getInstance(application)
 
-    fun abc(){
-        GuestRepository.getInstance()
+    fun save(){
+
     }
+
 }
