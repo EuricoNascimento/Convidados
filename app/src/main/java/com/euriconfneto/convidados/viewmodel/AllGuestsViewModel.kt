@@ -1,13 +1,19 @@
 package com.euriconfneto.convidados.viewmodel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import com.euriconfneto.convidados.model.GuestModel
+import com.euriconfneto.convidados.repository.GuestRepository
 
-class AllGuestsViewModel : ViewModel() {
+class AllGuestsViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    val repository = GuestRepository.getInstance(application.applicationContext)
+    private val listAllGuest = MutableLiveData<List<GuestModel>>()
+    val guests: LiveData<List<GuestModel>> = listAllGuest
+
+    fun getAll(){
+        listAllGuest.value = repository.getAll()
     }
-    val text: LiveData<String> = _text
 }
