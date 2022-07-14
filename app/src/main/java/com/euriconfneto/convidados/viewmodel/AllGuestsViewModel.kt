@@ -9,11 +9,15 @@ import com.euriconfneto.convidados.repository.GuestRepository
 
 class AllGuestsViewModel(application: Application) : AndroidViewModel(application) {
 
-    val repository = GuestRepository.getInstance(application.applicationContext)
+    private val repository = GuestRepository.getInstance(application.applicationContext)
     private val listAllGuest = MutableLiveData<List<GuestModel>>()
     val guests: LiveData<List<GuestModel>> = listAllGuest
 
     fun getAll(){
         listAllGuest.value = repository.getAll()
+    }
+
+    fun delete(id: Int){
+        repository.delete(id)
     }
 }
