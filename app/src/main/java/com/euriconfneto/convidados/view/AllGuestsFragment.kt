@@ -50,10 +50,14 @@ class AllGuestsFragment : Fragment() {
 
         adapter.attachListener(listener)
 
-        viewModel.getAll()
         observe()
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.getAll()
     }
 
     override fun onDestroyView() {
