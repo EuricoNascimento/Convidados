@@ -1,6 +1,5 @@
 package com.euriconfneto.convidados.view.viewholder
 
-import android.content.DialogInterface
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView

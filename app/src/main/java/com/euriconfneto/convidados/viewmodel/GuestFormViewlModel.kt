@@ -9,7 +9,7 @@ import com.euriconfneto.convidados.repository.GuestRepository
 
 class GuestFormViewlModel(application: Application) : AndroidViewModel(application) {
 
-    private val repository = GuestRepository.getInstance(application)
+    private val repository = GuestRepository(application.applicationContext)
     private val guestModel = MutableLiveData<GuestModel>()
     val guest: LiveData<GuestModel> = guestModel
     private val _saveGuest = MutableLiveData<String>()
